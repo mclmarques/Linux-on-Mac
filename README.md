@@ -1,4 +1,4 @@
-#Dual boot of Windows 11 and Ubutnu 22.10 on a 15 Retina Macbookpro 
+#Dual boot of Windows 11 and Ubutnu 22.10 on a 15 Retina Macbookpro\n
 Disclaimer: 
 *Machine used: 15 Retina Macbookpro with Nvidia GT750M graphics
 *OS choosed: Ubuntu 22.10 and Windows 11
