@@ -13,16 +13,16 @@ Other distros, like Arch seem to dificult (By that time I was a newbie with Linu
 
 Conclusion: for newbies to Linux with a Mac, I believe Ubuntu should be your first try (makes Linux easier and seems to run better on mac)
 
-Preparartion(Done on MacOS):
+**Preparartion(Done on MacOS):**
 1. From MacOS, you will need to download and Ubuntu and Windows iso (or choosed OS), then I used balena etcher to make the USB drive bootable. If you are installing windows, you will need to use Bootcamp, so you get the drivers needed
 
-Installation of Ubuntu (not installing Ubuntu first will cause you to afterwards not be able to boot Windows)
+**Installation of Ubuntu (not installing Ubuntu first will cause you to afterwards not be able to boot Windows)**
 1. Attatch the USB drive with Ubuntu and boot from it. From the installation menu, choose to use all the disk and earse it. I also checked the "Downlaod adittional drivers"
 2. Once the installation is finished, reboot and make sure everything went ok
 3. Now reboot, but from the Live USB, once there, select "Try Ubuntu"
 4. Once on the desktop (booted from the USB drive) go to the Disks app, and shrink the dosk whyere you have Ubuntu (I left 80 Gb for Windows) 
 
-Installation of Ubuntu
+**Installation of Ubuntu**
 So for doing this part, or either you have 2 USB drivers or you need to install MacOS again on the 80GB free partition to get the drivers from BootCamp, and then install Windows. I did the second way, it takes more time but it ended up working good for me. I will asume you have a USB drive with all the drivers needed from Bootcamp from now 
 1. Attach the USB drive, boot from on it
 2. On windows 11 when you get the set up screen, press Shift+F10, and type "regedit" on the terminal
@@ -34,7 +34,7 @@ So for doing this part, or either you have 2 USB drivers or you need to install 
 8. Install windows 11 on the 80 GB partition 
 9. Once everything is setup, proceed to the installation of bootcamp 
 
-Final adjustment 
+**Final adjustment**
 By now you probably can't boot to Ubuntu. Fro fixing this we are goinf to use a boot manager, in this case rEFInd (which also has a tool that allows us to use the integrated GPU on Windows and Ubuntu) 
 1. Create again a bootable USB of Ubuntu or reuse it 
 2. Boot and get to Firefox, and proceed to https://www.rodsbooks.com/refind/installing.html
@@ -48,4 +48,14 @@ By now you probably can't boot to Ubuntu. Fro fixing this we are goinf to use a 
 10. Uncomment the line with the comand to spoof osx (remove #)
 11. press crtl + o and then y
 12. reboot
-13. now you should reboot, and be able to choose which ps to boot from using rEFInd
+13. now you should reboot, and be able to choose which os to boot from using rEFInd
+
+**Enabling nvidia prime on Ubuntu**
+1. Once booted into Ubuntu, we need to check that the iGPU is detected. Dor that run: "lspci | grep VGA"
+You should see 2 entries, one for Intel and one for Nvidia
+2. On terminal run "sudo apt install nvidia-driver-470" 
+3. Reboot
+4. Go to https://github.com/0xbb/gpu-switch and download the zip file, uncompressed it and do cd PathToFolder
+5. On the folder run "sudo gpu-switch -i" and them reboot
+6. If everything wen't ok once you reboot and open nvidia-settings, you shoudl see that on-demand is the selected options. 
+As a side note, i don't really know whu only using Intel GPU is grey out, but trying to do so from the terminal usually bricks the OS. My recomendation is to leave on demand always. 
