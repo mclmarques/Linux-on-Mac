@@ -1,4 +1,4 @@
-#Dual boot of Windows 11 and Ubutnu 22.10 on a 15 Retina Macbookpro
+#Dual boot of Windows 11 and Ubutnu 22.10 on a 15 Retina MacbookPro with Nvidia graphics
 
 **Disclaimer:**
 
