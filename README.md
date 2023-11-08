@@ -21,7 +21,7 @@ If you have 2 USB drivers, I recommned flashing each OS in one of them to save u
 3. Now reboot, but from the Live USB, once there, select "Try Ubuntu"
 4. Once on the desktop (booted from the USB drive) go to the Disks app, and shrink the disk whyere you have Ubuntu (I left 80 Gb for Windows) 
 
-**Installation of Widnows**
+**Installation of Windows**
 If you don't have 2 USBs you need to install MacOS again on the 80GB free partition to get the drivers from BootCamp, and then install Windows. It takes more time but it ended up working good for me. I will asume you have a USB drive with all the drivers needed from Bootcamp from now 
 1. Attach the USB drive, boot from on it
 2. On windows 11 when you get the set up screen, press Shift+F10, and type "regedit" on the terminal
